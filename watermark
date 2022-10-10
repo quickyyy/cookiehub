@@ -4,7 +4,7 @@ local RunService = game:GetService("RunService")
 local Workspace = game:GetService("Workspace")
 local ST = game:GetService("Stats")
 
-if WaterLoad then
+if WaterMarkLoaded then
    getgenv().Text = Drawing.new("Text")
    Text.Color = Color3.new(107,102,255)
    Text.Font = 1
@@ -28,7 +28,7 @@ local A =
    function(v)
        pcall(
            function()
-               if Waterload then
+               if WaterMarkLoaded then
                    
                    Text.Visible = true
                    Text.Text = " Date: " ..
@@ -38,7 +38,7 @@ local A =
                                )) ..
                                "  " .. ("FPS: " .. math.round(1 / v)) 
                    Text.Color = Color3.fromHSV(tick() % 5 / 5, 1, 1) 
-               elseif not Waterload then
+               elseif not WaterMarkLoaded then
                    Text:Remove()
                end
            end
