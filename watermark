@@ -28,7 +28,7 @@ local A =
    function(v)
        pcall(
            function()
-               if Bitch then
+               if Waterload then
                    
                    Text.Visible = true
                    Text.Text = " Date: " ..
@@ -38,7 +38,7 @@ local A =
                                )) ..
                                "  " .. ("FPS: " .. math.round(1 / v)) 
                    Text.Color = Color3.fromHSV(tick() % 5 / 5, 1, 1) 
-               elseif not Bitch then
+               elseif not Waterload then
                    Text:Remove()
                end
            end
