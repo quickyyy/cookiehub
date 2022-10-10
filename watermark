@@ -6,12 +6,12 @@ local ST = game:GetService("Stats")
 
 if WaterLoad then
    getgenv().Text = Drawing.new("Text")
-   Text.Color = Color3.new(0, 1, 1)
+   Text.Color = Color3.new(107,102,255)
    Text.Font = 1
    Text.Outline = true
-   Text.OutlineColor = Color3.new(0, 0, 0)
+   Text.OutlineColor = Color3.new(107,102,255)
    Text.Position = Vector2.new(0,0)
-   Text.Size = 25
+   Text.Size = 13
    Text.Text = "Test"
    Text.Visible = false
 end
@@ -32,7 +32,7 @@ local A =
                    
                    Text.Visible = true
                    Text.Text = " Date: " ..
-                       tostring(os.date()) .. " GameId " .. game.PlaceId .. " Game JobId " .. game.JobId ..(" Ping: " ..
+                       tostring(os.date()) .. " GameId " .. game.PlaceId .. " Ping: " ..
                                ST.Network.ServerStatsItem["Data Ping"]:GetValueString(
                                    math.round(2 / v)
                                )) ..
